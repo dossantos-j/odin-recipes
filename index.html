@@ -4,13 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Odin Recipes</h1>
-    <ul>
-        <li><a href="recipes/lasagna.html">Lasagna</a></li>
-        <li><a href="recipes/roasted_duck.html">Roasted Duck</a></li>
-        <li><a href="recipes/grilled_sea_bass.html">Grilled Sea Bass</a></li>
-    </ul>
+    <div class="view">
+        <div class="containerparent">
+            <div class="halfcolumn halfcolumn1">
+                <div class="item item1">one</div>
+                <div class="item item2">two</div>
+                <div class="item item3">three</div>
+            </div>
+            <div class="halfcolumn halfcolumn2">
+                <div class="item item4">four</div>
+                <div class="item item5">five</div>
+                <div class="item item6">six</div>
+            </div>
+        </div>
+    </div>
 </body>
+<style>
+    html {
+        background: black;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .view {
+        width: 100%;
+    }
+
+    .item {
+        border: 3px solid seashell;
+        border-radius: 3px;
+        padding: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        align-content: center;
+    }
+
+    .containerparent {
+        display: flex;
+        height: 250px;
+    }
+
+    .halfcolumn {
+        display: flex;
+        align-items: center;
+    }
+
+    .halfcolumn1 {
+        background: lightgrey;
+        flex: 1 1 0;
+        justify-content: flex-end;
+    }
+
+    .halfcolumn2 {
+        background: lightslategray;
+        flex: 1 1 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .item1 {
+        background: tomato;
+        flex-basis: 100px;
+        min-width: 100px;
+        margin-right: auto;
+    }
+
+    .item2 {
+        background: DodgerBlue;
+        align-self: stretch;
+        flex-basis: 100px;
+        min-width: 100px;
+    }
+
+    .item3 {
+        background: MediumSeaGreen;
+        flex-basis: 100px;
+        flex-grow: 0;
+        min-width: 0px;
+    }
+
+    .item4 {
+        background: lime;
+        flex-basis: 50px;
+    }
+
+    .item5 {
+        background: orange;
+    }
+
+    .item6 {
+        background: violet;
+        align-self: flex-end;
+    }
+    
+</style>
+
 </html>
